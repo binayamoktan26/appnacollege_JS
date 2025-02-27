@@ -201,22 +201,125 @@ a. Remove the first company from the array
 b. remove Uber & Add Ola in its place 
 c. add amazon at the end*/
 //ans
-const companies = [
-  "bloomberg ",
-  "google",
-  "microsoft",
-  "facebook",
-  "uber",
-  "IBM",
-  "Netflix",
-];
+// const companies = [
+//   "bloomberg ",
+//   "google",
+//   "microsoft",
+//   "facebook",
+//   "uber",
+//   "IBM",
+//   "Netflix",
+// ];
 //a
 // companies.shift();
 // console.log(companies);
 //b
-companies.splice(4, 1, "ola");
-console.log(companies);
+// companies.splice(4, 1, "ola");
+// console.log(companies);
 
 //c
-companies.push("amazon");
-console.log(companies);
+// companies.push("amazon");
+// console.log(companies);
+
+// Function and Method in javaScript
+
+// function myFunction() {
+//   console.log("i am learning js");
+// }
+// myFunction();
+
+// function myFunction(msg) {
+//parameter input
+//   console.log(msg);
+// }
+// myFunction("i love javascript"); //argument
+
+// function sum(a, b) {
+//   console.log(a + b);
+// }
+// sum(3, 5);
+
+//Arrow function
+// const sum = (a, b) => {
+//   return a + b;
+// };
+// let result = sum(2, 4);
+// console.log(result);
+
+//multiplication function
+// const arrowMultiply = (a, b) => {
+
+//   result = a * b;
+//   return result;
+// };
+// let val = arrowMultiply(3, 7);
+// console.log(val);
+
+// forEach Loop in arrays
+
+// let arr = ["ramechhap ", "manthali ", "kathmandu ", "bhaktapur ", "lalitpur "];
+// arr.forEach((val, idx, arr) => {
+//   console.log(val.toUpperCase(), idx, arr);
+// });
+
+// let nums = [1, 3, 5, 6, 7];
+// nums.forEach((num) => {
+//   console.log(num * num);
+// });
+
+//
+
+//some more array methods
+//Map
+//create a new array with the result of some opearation .
+// the value its callback returns are used to form new array
+//arr.map(callbacFnx(value,index,array))
+
+// let nums = [2, 4, 5, 6, 7];
+// let newArr = nums.map((val) => {
+//   return val * 2;
+// });
+// console.log(newArr);
+
+//Filter
+//creates a new array of elements that give tue for a condition / filter .
+//eg :: all even elements
+// let arr = [2, 5, 6, 8, 4, 55];
+// let evenNum = arr.filter((val) => {
+//   return val % 2 !== 0;
+// });
+// console.log(evenNum);
+
+//reduce method
+//Perfoms some operations & reduces the array to a single value . It returns that single value
+// let arr = [1, 2, 3, 4, 5];
+// const result = arr.reduce((res, curr) => {
+//   return res + curr;
+// });
+// console.log(result);
+
+//we are given array of marks of students . filter out the marks of students that scored 90 +
+// let studentMark = [78, 95, 93, 85, 52, 87];
+// let score = studentMark.filter((mark) => {
+//   return mark >= 90;
+// });
+// console.log(score);
+
+//take a numner n as input from user. create an array of numbers from 1 to n.
+//use the reduce method to calculate sum of all numbers in the array .
+//use the reduce to calculaaatae  product of all numbers in the  array
+let n = prompt("enter a number :");
+let arr = [];
+for (let i = 1; i <= n; i++) {
+  arr[i - 1] = i;
+}
+console.log(arr);
+let sum = arr.reduce((res, curr) => {
+  return res + curr;
+});
+console.log(sum);
+
+let product = arr.reduce((res, curr) => {
+  return res * curr;
+});
+console.log(product);
